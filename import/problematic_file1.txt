@@ -1,0 +1,6 @@
+student no|department name|term name|final Grade|letter Grade
+1600001|math|fall|4|A
+1600001|chem|fall|3.4|B
+1600121|math|fall|3.9|A
+1600051|math|spring|2.7|C
+1600121|chem|spring|3.3|B
