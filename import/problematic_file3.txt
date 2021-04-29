@@ -1,0 +1,7 @@
+# this file contains final grades 
+# for students
+1600003;math;fall;3.4;A
+1600003;chem;fall;3.9;B
+1600123;math;fall;3.3;A
+1600053;math;spring;2.4;C
+1600123;chem;spring;3.8;B
