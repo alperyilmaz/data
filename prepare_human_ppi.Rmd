@@ -1,0 +1,40 @@
+---
+title: "prepare_human_ppi"
+author: "alper yilmaz"
+date: "6/3/2021"
+output: html_document
+---
+
+download the file
+
+```{r}
+download.file("https://downloads.thebiogrid.org/Download/BioGRID/Release-Archive/BIOGRID-4.4.198/BIOGRID-ALL-4.4.198.tab3.zip",destfile = "/cloud/project/data/BIOGRID-ALL-4.4.198.tab3.zip")
+```
+unzip the archive (we are using terminal here, not R!)
+
+```{bash}
+unzip BIOGRID-ALL-4.4.198.tab3.zip
+```
+
+
+```{r}
+library(tidyverse)
+
+read_tsv("BIOGRID-ALL-4.4.198.tab3.txt") %>% 
+  # get only human-human interactions
+  filter(`Organism ID Interactor A`==9606, `Organism ID Interactor B`==9606) %>% 
+  # remove lines where both proteins are same - self-interacting proteins
+  filter(`Official Symbol Interactor A` != `Official Symbol Interactor B`) %>%
+  select(interactor_A="Official Symbol Interactor A", 
+         interactor_B="Official Symbol Interactor B") %>% 
+  distinct() %>% 
+  write_tsv("human_ppi.tsv.gz")
+
+```
+
+remove unused large files (we are using terminal here, not R!)
+
+```{bash}
+rm BIOGRID-ALL-4.4.198.tab3.zip BIOGRID-ALL-4.4.198.tab3.txt
+```
+

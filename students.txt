@@ -1,0 +1,11 @@
+studentNo,dept,gender,birthYear
+100101,bioeng,M,1995
+100102,bioeng,F,1996
+100103,bioeng,F,1995
+100104,bioeng,F,1997
+100105,mbg,M,1996
+100106,mbg,F,1997
+100107,mbg,F,1995
+100108,bioeng,M,1996
+100109,bioeng,M,1995
+100110,bioeng,F,1997

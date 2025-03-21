@@ -1,0 +1,9 @@
+taken from https://github.com/hadley/data-fuel-economy
+
+files needed cleaning:
+sed -e 's/" *"/NA/g' -e 's/ *\**"/"/g' -e 's/" *\([0-9]\+\)"/\1/g' -i.bak mpg.csv
+
+csvtk cut -f -hatch.l,-twodoor.p,-class,-fourdoor.l 1978-1984mpg.csv > 1978-1984mpg_clean.csv
+csvtk cut -f -hatch.l,-twodoor.p,-class,-fourdoor.l clean85-97.csv > clean85-97_clean.csv
+csvtk cut -f -hatch.l,-twodoor.p,-class,-fourdoor.l mpg.csv >| mpg_clean.csv
+

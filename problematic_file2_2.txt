@@ -1,0 +1,7 @@
+# student grades for spring 2016
+student no,department name,term name,final Grade,letter Grade
+1600001,math,fall,4,A
+1600120,chem,fall,3.4,B
+1600121,math,all,3.9,A
+1600051,math,spring,2.7,C
+1600081,chem,spring,3.3,B
